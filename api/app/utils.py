@@ -64,7 +64,7 @@ class preprocess():
     
 class describe():
     def __init__(self):
-        api_key='AIzaSyC3vJG_5vF9TeYoewmZOhN0AgnKt1rlVmg'
+        api_key= 'api_key'
         genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel(model_name = 'gemini-2.0-flash')
     def crop(self,data):
@@ -81,3 +81,4 @@ class describe():
 
         responce = self.model.generate_content(task)
         return responce.text.split('**')[-1]
+
