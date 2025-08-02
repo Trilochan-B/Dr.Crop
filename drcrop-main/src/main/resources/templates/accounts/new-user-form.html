@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>DR CROP</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link id="favicon" rel="icon" type="image/png" href="images/dr-crop-logo--white.png">
+</head>
+
+<body class="new-user-form-body">
+    <div class="homepage-header">
+        <div class="homepage-logo">
+            <img th:src="@{/images/logo.png}">
+            
+        </div>
+        <div class="homepage-nav">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=drcropimca@gmail.com" target="_blank" class="homepage-nav-link">Support</a>
+            <a href="/web/aboutUs"><button class="homepage-analyze-btn">About Us</button></a>
+            
+        </div>
+    </div>
+<h2 class="new-user-form-h2">Create new Account</h2>
+
+<form action="/accounts/new-user-form" method="post" class="new-user-form-form">
+    <label for="email" class="new-user-form-label">Email : </label>
+    <input type="email" id="email" class="new-user-form-input" name="email" required>
+    <br>
+    <label for="fname" class="new-user-form-label">First Name : </label>
+    <input type="text" id="fname" class="new-user-form-input" name="fname" required>
+    <br>
+    <label for="mname" class="new-user-form-label">Middle Name : </label>
+    <input type="text" id="mname" class="new-user-form-input" name="mname">
+    <br>
+    <label for="lname" class="new-user-form-label">Last Name : </label>
+    <input type="text" id="lname" class="new-user-form-input" name="lname" required>
+    <br>
+    <label for="phone" class="new-user-form-label">Phone Number : </label>
+    <input type="number" id="phone" class="new-user-form-input" name="phone" min="1000000000" max="9999999999" required>
+    <br><br>
+    <button type="submit" class="new-user-form-button">Create Account</button>
+</form>
+
+</body>
+</html>
